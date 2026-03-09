@@ -1,27 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
 import { FaPlus } from 'react-icons/fa';
+import { foods as staticFoods } from '../data/foods';
 
 const Menu = () => {
-  const [foods, setFoods] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [foods] = useState(staticFoods);
+  const [loading] = useState(false);
   const { addToCart } = useCart();
-
-  useEffect(() => {
-    const fetchFoods = async () => {
-      try {
-        const { data } = await axios.get('http://localhost:5000/api/foods');
-        setFoods(data);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching foods', error);
-        setLoading(false);
-      }
-    };
-
-    fetchFoods();
-  }, []);
 
   if (loading) return (
     <div className="page-container loader-container">

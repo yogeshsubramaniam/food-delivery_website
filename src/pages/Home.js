@@ -21,15 +21,27 @@ const Home = () => {
             </Link>
           </div>
           
-          <div style={{ display: 'flex', gap: '20px', marginTop: '40px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)' }}>
-              <FaClock style={{ color: 'var(--accent)' }}/> Fast Delivery
+          <div className="hero-stats">
+            <div className="stat-item">
+              <div className="stat-icon fast"><FaClock /></div>
+              <div className="stat-text">
+                <h4>Fast Delivery</h4>
+                <p>Under 30 minutes</p>
+              </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)' }}>
-              <FaHeart style={{ color: 'var(--primary)' }}/> 10k+ Favorites
+            <div className="stat-item">
+              <div className="stat-icon hot"><FaHeart /></div>
+              <div className="stat-text">
+                <h4>10k+ Favorites</h4>
+                <p>Loved by many</p>
+              </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)' }}>
-              <FaMotorcycle style={{ color: 'var(--success)' }}/> Free Shipping
+            <div className="stat-item">
+              <div className="stat-icon fresh"><FaMotorcycle /></div>
+              <div className="stat-text">
+                <h4>Free Shipping</h4>
+                <p>On all orders</p>
+              </div>
             </div>
           </div>
         </div>

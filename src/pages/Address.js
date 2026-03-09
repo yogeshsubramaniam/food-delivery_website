@@ -24,88 +24,83 @@ const Address = () => {
 
   return (
     <div className="page-container">
-      <div className="menu-header">
-        <div>
-          <h2 className="cart-title">Delivery Address</h2>
-          <p className="cart-subtitle">Where should we deliver your delicious food?</p>
-        </div>
-      </div>
-
-      <div style={{ maxWidth: '600px', margin: '0 auto', background: 'white', padding: '2rem', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
-        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+      <div className="checkout-wrapper">
+        <h2 className="checkout-title">Delivery Address</h2>
+        <form onSubmit={handleSubmit}>
           
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-            <label htmlFor="name" style={{ fontWeight: '500', color: 'var(--text-color)' }}>Full Name</label>
+          <div className="form-group">
+            <label htmlFor="name">Full Name</label>
             <input 
               type="text" 
               id="name" 
               name="name" 
               value={formData.name} 
               onChange={handleChange} 
+              className="form-control"
               required 
-              style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #e2e8f0', fontSize: '1rem', outline: 'none', transition: 'border-color 0.2s' }}
               placeholder="John Doe"
             />
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-            <label htmlFor="phone" style={{ fontWeight: '500', color: 'var(--text-color)' }}>Phone Number</label>
+          <div className="form-group">
+            <label htmlFor="phone">Phone Number</label>
             <input 
               type="tel" 
               id="phone" 
               name="phone" 
               value={formData.phone} 
               onChange={handleChange} 
+              className="form-control"
               required 
-              style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #e2e8f0', fontSize: '1rem', outline: 'none' }}
               placeholder="+91 9876543210"
             />
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-            <label htmlFor="address" style={{ fontWeight: '500', color: 'var(--text-color)' }}>Street Address</label>
+          <div className="form-group">
+            <label htmlFor="address">Street Address</label>
             <textarea 
               id="address" 
               name="address" 
               value={formData.address} 
               onChange={handleChange} 
+              className="form-control"
               required 
               rows="3"
-              style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #e2e8f0', fontSize: '1rem', outline: 'none', resize: 'vertical' }}
+              style={{ resize: 'vertical' }}
               placeholder="123 Food Lane, Appt 4B"
             ></textarea>
           </div>
           
-          <div style={{ display: 'flex', gap: '1rem' }}>
-            <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label htmlFor="city" style={{ fontWeight: '500', color: 'var(--text-color)' }}>City</label>
+          <div style={{ display: 'flex', gap: '20px' }}>
+            <div className="form-group" style={{ flex: '1' }}>
+              <label htmlFor="city">City</label>
               <input 
                 type="text" 
                 id="city" 
                 name="city" 
                 value={formData.city} 
                 onChange={handleChange} 
+                className="form-control"
                 required 
-                style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #e2e8f0', fontSize: '1rem', outline: 'none' }}
                 placeholder="Mumbai"
               />
             </div>
-            <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label htmlFor="zip" style={{ fontWeight: '500', color: 'var(--text-color)' }}>Postal Code</label>
+            <div className="form-group" style={{ flex: '1' }}>
+              <label htmlFor="zip">Postal Code</label>
               <input 
                 type="text" 
                 id="zip" 
                 name="zip" 
                 value={formData.zip} 
                 onChange={handleChange} 
+                className="form-control"
                 required 
-                style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #e2e8f0', fontSize: '1rem', outline: 'none' }}
                 placeholder="400001"
               />
             </div>
           </div>
 
-          <button type="submit" className="btn btn-primary" style={{ marginTop: '1rem', width: '100%', padding: '1rem', fontSize: '1.1rem' }}>
+          <button type="submit" className="btn btn-primary btn-block">
             Continue to Payment
           </button>
         </form>

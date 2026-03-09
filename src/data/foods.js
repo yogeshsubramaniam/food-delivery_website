@@ -1,0 +1,10 @@
+export const foods = [
+  { _id: '1', name: 'Premium Burger', description: 'Juicy double beef patty with secret sauce', price: 150, image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', category: 'Fast Food' },
+  { _id: '2', name: 'Truffle Pizza', description: 'Wood-fired crust with black truffle and mozzarella', price: 350, image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', category: 'Gourmet' },
+  { _id: '3', name: 'Avocado Salad', description: 'Fresh greens with Hass avocado and lime dressing', price: 180, image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', category: 'Healthy' },
+  { _id: '4', name: 'Royal Butter Chicken', description: 'Creamy and spicy authentic Indian curry', price: 290, image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80', category: 'Indian' },
+  { _id: '5', name: 'Sizzling Paneer Tikka', description: 'Charcoal grilled cottage cheese with spices', price: 220, image: 'https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', category: 'Indian' },
+  { _id: '6', name: 'Dragon Sushi Roll', description: 'Premium fresh salmon maki rolls', price: 450, image: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', category: 'Japanese' },
+  { _id: '7', name: 'Truffle Pasta Alfredo', description: 'Creamy white sauce pasta with truffle oil', price: 320, image: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&q=80', category: 'Italian' },
+  { _id: '8', name: 'Belgian Chocolate Cake', description: 'Rich loaded ultra-premium chocolate dessert', price: 250, image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', category: 'Dessert' }
+];
